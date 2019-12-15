@@ -62,7 +62,6 @@ def setpagerequest(link):
     minJmprice = input().replace(',','')
     minPrice=minJmprice.replace(' ','')
     page = requests.get('https://www.jumia.co.ke/'+link+'?price='+minPrice+'-'+maxPrice)
-     
     pageandsoup(page)
 def switch_demo(argument):
     if(argument==1):

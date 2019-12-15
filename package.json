@@ -1,9 +1,9 @@
 {
-    "scripts": {
-      "test": "jest",
-      "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
-
-    }
-   
+  "scripts": {
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.9"
+  }
 }
- 
