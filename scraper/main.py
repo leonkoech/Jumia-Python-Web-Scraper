@@ -44,11 +44,13 @@ def searchweb():
     print('enter product name:')
     querytxt = input()
     print('enter maximum price of item')
+    #remove commas
     maxJmprice = input().replace(',','')
-    maxPrice=maxJmprice.replace(' ','')
+    #remove spaces
+    maxPrice=maxJmprice.strip()
     print('enter minimum price of item')
     minJmprice = input().replace(',','')
-    minPrice=minJmprice.replace(' ','')
+    minPrice=minJmprice.strip()
     query=querytxt.replace(' ','%20')
     page = requests.get('https://www.jumia.co.ke/catalog/?q='+query+'&price='+minPrice+'-'+maxPrice)
      
@@ -57,10 +59,10 @@ def searchweb():
 def setpagerequest(link):
     print('enter maximum price of item')
     maxJmprice = input().replace(',','')
-    maxPrice=maxJmprice.replace(' ','')
+    maxPrice=maxJmprice.strip()
     print('enter minimum price of item')
     minJmprice = input().replace(',','')
-    minPrice=minJmprice.replace(' ','')
+    minPrice=minJmprice.strip()
     page = requests.get('https://www.jumia.co.ke/'+link+'?price='+minPrice+'-'+maxPrice)
     pageandsoup(page)
 def switch_demo(argument):

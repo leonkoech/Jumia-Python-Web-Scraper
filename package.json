@@ -4,6 +4,7 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "coveralls": "^3.0.9"
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0"
   }
 }
