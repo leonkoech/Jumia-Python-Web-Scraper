@@ -11,7 +11,7 @@ def backgroundrun(current,dip,link,description):
     # if current price is less than or equal to dip send notification
     #start by checking the link and check the price
     #check link
-    if(link!=''):
+    while(link!=''):
         page=requests.get(link)
         soup = BeautifulSoup(page.text, 'html.parser')
         #check price
@@ -22,10 +22,9 @@ def backgroundrun(current,dip,link,description):
         price0=price1[-3:]
         pricefull=pricek+price0
         price=int(pricefull)
-        if (price==current):
-            notify.send('link is here',link)
         if(price==dip or price<dip):
             notify.send('PRICE DROP'+description,link)
+            break
     else:
         #if link is empty exit() or break
         call('pkill -f backgroundruns.py',shell=True)

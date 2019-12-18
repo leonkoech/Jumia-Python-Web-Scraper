@@ -41,17 +41,15 @@ def productsearchWithPrice():
                 print('\nopen link below\n',notifylink)
                 print('have you opened the link and subscribed?Y\n')
                 if(input().upper()=='Y'):
+                    #install notify
+                    call('pip install notify',shell=True)
                     call('chmod +x backgroundruns.py',shell=True)
                     call('nohup python3 backgroundruns.py >/dev/null 2>&1 &',shell=True)
                     backgroundruns.backgroundrun(price,dip,str(i['url']),str(i['description']))
                     print('\n\nprocess started....\n\n')
                     print('package will check product on background and will send notifications to subscribed devices')
-                    print('[1] kill every process \n[2]close python project while process runs')
-                    if(input()=='1'):
-                        call('pkill -f backgroundruns.py',shell=True)
-                        exit()
-                    elif(input()=='2'):
-                        exit()
+                    print('\n\nTo kill background process run pkill -f backgroundruns.py\n\n')
+                    exit()
                 if(input().lower()=='n'):
                     print('\n\nError: Please open link and subscribe first')
                     exit()
