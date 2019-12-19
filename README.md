@@ -8,6 +8,7 @@
 The module scrapes the [Jumia Kenya website](jumia.co.ke) based on user query and dumps the results on a JSON file. The query may be choosing either one of the categories or searching the whole website or even selecting a product to observe for price changes. In all instances the name, the minimum and maximum price value is required to get a rough estimate of the product. User then selects the product to watch by entering it's price.
 The background script then runs and sends a notification to devices subscribed to the notification channel. the notification contains the link to the webpage of the product.
 
+The motivation for this product came from a friend who bought an electric iron for clothes for 1ksh(0.0099USD). He did this by constantly watching the price for changes. So I thought it'd be cool if a bot actually did that for you.
 # Requirements
 This package requires the following to run:
 
