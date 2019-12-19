@@ -3,15 +3,16 @@
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Build status](https://ci.appveyor.com/api/projects/status/pjxh5g91jpbh7t84?svg=true)](https://ci.appveyor.com/project/tygerbytes/resourcefitness)
  [![Coverage Status](https://coveralls.io/repos/github/leonkoech/Jumia-Python-Web-Scraper/badge.svg?branch=master)](https://coveralls.io/github/leonkoech/Jumia-Python-Web-Scraper?branch=master)
-# Simple Jumia Webscraping Package
+# Simple Jumia Webscraping Module
 
-Scrapes Jumia website based on user query and dumps the results to a JSON file. The query may be choosing one of the categories or searching the whole website. In both instances the minimum and maximum price value is required
+The module scrapes the [Jumia Kenya website](jumia.co.ke) based on user query and dumps the results on a JSON file. The query may be choosing either one of the categories or searching the whole website or even selecting a product to observe for price changes. In all instances the name, the minimum and maximum price value is required to get a rough estimate of the product. User then selects the product to watch by entering it's price.
+The background script then runs and sends a notification to devices subscribed to the notification channel. the notification contains the link to the webpage of the product.
+
 # Requirements
 This package requires the following to run:
 
-- [git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
- 
- - [python](https://www.python.org/downloads/)>=3.6
+- [git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)  
+- [python](https://www.python.org/downloads/)>=3.6
 # Installation
 First you have to clone the repo by writing the following code
 
@@ -34,8 +35,6 @@ Then run the python file
 You can contribute to this project.
 To contribute to this project, clone repo locally and commit your code on a seperate branch.
 You can find more details in my [Contributing guide](docs/contibuting.md)
-plans for the future
-By adding push notifications and also automation. So that if the price of a particular product the user is eyeing on goes below a certain price, a notification alerts the user. Be it on a flutter app or a desktop/pc app.
 
 # license
 Jumia Python Web Scraper is licensed under [MIT](#) license.
