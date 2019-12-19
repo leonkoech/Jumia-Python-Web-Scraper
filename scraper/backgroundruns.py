@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 import webbrowser
 from notify_run import Notify
 from subprocess import call
-
+call('chmod +x backgroundruns.py',shell=True)
+call('nohup python3 backgroundruns.py >/dev/null 2>&1 &',shell=True)
 notify=Notify()
 def backgroundrun(current,dip,link,description):
     #TO:DO 
@@ -22,9 +23,14 @@ def backgroundrun(current,dip,link,description):
         price0=price1[-3:]
         pricefull=pricek+price0
         price=int(pricefull)
-        if(price==dip or price<dip):
-            notify.send('PRICE DROP'+description,link)
+        while(price==current or price<current):
+            print('message sent to device')
+            notify.send('PRICE DROP:'+description,link)
+            call('pkill -f backgroundruns.py',shell=True)
+            exit()
             break
+        else:
+            exit()
     else:
         #if link is empty exit() or break
         call('pkill -f backgroundruns.py',shell=True)
