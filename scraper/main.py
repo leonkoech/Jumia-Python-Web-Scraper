@@ -12,8 +12,6 @@ print('choose a category by number: \n [1] phones and tablets ',sp,'[2] electron
 print(' [4] home and office',sp,'[5] health and beauty',sp,'[6] grocery \n [7] carrefour shop',sp,'[8] baby products',sp,'[9] fashion')
 print(' [0] search whole website',sp,'[11]observe product')
 argument=int(input())
-#install pip install notify-run
-#call('pip3 install notify-run',shell=True)
 print('if prompted to Overwrite existing configuration press Y\n')
 notifylink=notify.register().endpoint
 print(notifylink)
@@ -69,7 +67,6 @@ def pageandsoup(page):
                 print(i['url'])
                 print('Is this the product?Y/n')
                 if(input().upper()=='Y'):
-                    #user selected yes
                     print('click on subscribe  to receive a notification once the product of the price dips')
                     print('note: this process python code has to run in the background. so do not switch off your device.')
                     print('and if you do please rerun this python code')
