@@ -35,9 +35,10 @@ Then run the python file
 # Contribution
 You can contribute to this project.
 To contribute to this project, clone repo locally and commit your code on a seperate branch.
-You can find more details in my [Contributing guide](docs/contibuting.md)
+You can find more details in my [Contributing guide](docs/contibuting.md)  
+You can also reach me via [email](mailto:leonkipkip@gmail.com?subject=Python%20Web%29%Scraper) me or better yet shoot me a [twitter](https://twitter.com/messages/compose?recipient_id=460904371) DM.
 
 # license
-Jumia Python Web Scraper is licensed under [MIT](#) license.
+Jumia Python Web Scraper is licensed under [MIT](#) license.  
 Copyright &copy; 2019, Leon Kipkoech
 
