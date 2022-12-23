@@ -40,5 +40,4 @@ You can also reach me via [email](mailto:leonkipkip@gmail.com?subject=Python%20W
 
 # license
 Jumia Python Web Scraper is licensed under [MIT](#) license.  
-Copyright &copy; 2019, Leon Kipkoech
 
